@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel De Luca - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .side-menu {
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .side-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #f1f1f1;
+        }
+
+        .side-menu .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="side-menu" id="sideMenu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="#projects">Projects</a>
+        <!-- Add more links here for additional pages -->
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="menu-icon" onclick="openMenu()">&#9776; Menu</div>
+            <h1>Daniel De Luca</h1>
+            <p>Web Developer</p>
+        </div>
+
+        <div class="main-content">
+            <h2 id="projects">Projects</h2>
+            <!-- Add your project details here -->
+            <!-- Example:
+            <h3>Project Name</h3>
+            <p>Description of the project goes here.</p>
+            -->
+
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
